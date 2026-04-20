@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Pre-fill event form from URL params (e.g. when clicking a cell in WeeklyView)
+
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     if (params.get("date") || params.get("start")) {
-        // Switch to event tab
+    
         const eventOption = document.getElementById("eventOption");
         if (eventOption) { eventOption.checked = true; eventOption.dispatchEvent(new Event("change")); }
 
@@ -88,10 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
     weeklyOption.addEventListener("change", updateFrequencyView);
     monthlyOption.addEventListener("change", updateFrequencyView);
 
-    updateFrequencyView(); // run once on load
+    updateFrequencyView();
 });
 
-// Save event to localStorage on submit
 document.addEventListener("DOMContentLoaded", () => {
     const saveEventBtn = document.querySelector("button[name='saveEvent']");
     if (!saveEventBtn) return;
@@ -117,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
         events.push(event);
         localStorage.setItem("mindtrack_events", JSON.stringify(events));
 
-        // Go back to the page that opened this form
         const returnTo = document.referrer && document.referrer !== window.location.href
             ? document.referrer
             : "Dashboard.html";
