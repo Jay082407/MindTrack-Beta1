@@ -36,6 +36,32 @@ main {
     align-items: center;
 }
 
+#calendarView {
+    background-color: #ffffff;
+    padding: 32px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#eventList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#pdfViewer {
+    background-color: #ffffff;
+    padding: 32px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: none;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -340,5 +366,29 @@ textarea {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+.FileUpload {
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+    padding: 40px 20px 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.FileUpload.dragover {
+    background-color: #e0f7fa;
+    border-color: #00bcd4;
+}
+
+.FileUpload p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.FileUpload input[type="file"] {
+    display: none;
 }
 
