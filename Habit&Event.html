@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Event & Habit Planner</title>
   <link rel="stylesheet" href="Event&habit.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,8 +109,10 @@
 
       <br><br>
 
-      <p>Drag & Drop file here or Click to Upload</p>
-      <input type="file" id="FileInput" name="uploadedFile">
+      <div class="FileUpload">
+        <p>Drag & Drop PDF here or Click to Upload</p>
+        <input type="file" id="FileInput" name="uploadedFile" accept=".pdf">
+      </div>
 
       <br><br>
       <div class="SaveCancelEvent">
@@ -233,7 +235,7 @@
       <br><br>
 
       <label for="HabitDescription">Description</label><br><br>
-      <textarea type="text" id="HabitDescription" name="habitDescription" rows="4" cols="50" placeholder="Notes about the habit...">Notes about the habit...</textarea>
+      <textarea type="text" id="HabitDescription" name="habitDescription" rows="4" cols="50" placeholder="Notes about the habit..."></textarea>
 
       <br><br>
       <div class="SaveCancelHabit">
@@ -244,6 +246,11 @@
     </div>
   </form>
 </main>
+
+<div id="pdfViewer">
+  <h2>Uploaded PDF</h2>
+  <embed id="pdfEmbed" type="application/pdf" width="100%" height="600px" />
+</div>
 
 <script src="EventAndHabit.js"></script>
 
