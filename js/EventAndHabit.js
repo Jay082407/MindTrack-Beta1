@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const returnTo = document.referrer && document.referrer !== window.location.href
             ? document.referrer
-            : "Dashboard.html";
+            : "index.html";
         window.location.href = returnTo;
     }
 
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const returnTo = document.referrer && document.referrer !== window.location.href
             ? document.referrer
-            : "Dashboard.html";
+            : "index.html";
         window.location.href = returnTo;
     }
 
